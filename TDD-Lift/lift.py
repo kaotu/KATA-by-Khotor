@@ -9,7 +9,14 @@ class LiftTest(unittest.TestCase):
         actual = lift(1, 1)
         self.assertEqual(actual, expected)
 
+    def test_input_1_and_position_3_sholud_return_lift3(self):
+        expected = 'lift3'
+        actual = lift(1, 1)
+        self.assertEqual(actual, expected)
+
 def lift(input, position):
-    return 'lift1'
+    if input == 1 and position == 1:
+        return 'lift1'
+    return 'lift3'
 
 unittest.main()
