@@ -29,20 +29,19 @@ class LiftTest(unittest.TestCase):
         self.assertEqual(actual, expected)
 
 
-lift_all = [
-    {'lift':'lift_1', 'floor': 2},
-    {'lift':'lift_2', 'floor': 3},
-    {'lift':'lift_3', 'floor': 5}
-]
+#lift_all = [
+#    {'lift':'lift_1', 'floor': 2},
+#    {'lift':'lift_2', 'floor': 3},
+#    {'lift':'lift_3', 'floor': 5}
+#]
 
 def lift(input):
-    if input == 2:
-        return lift_all[0].get('lift')
+    if input == 2 or input == 1:
+        return 'lift_1'
     elif input == 3 or input == 4:
-        return lift_all[1].get('lift')
+        return 'lift_2'
     elif input == 5:
-        return lift_all[2].get('lift')
-    return lift_all[0].get('lift')
+        return 'lift_3'
 
 
 unittest.main()
