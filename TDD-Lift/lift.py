@@ -2,7 +2,6 @@ import unittest
 
 
 #lift : [[1,2],[2,3],[3,5]]
-
 class LiftTest(unittest.TestCase):
     def test_input_1_should_return_lift_1(self):
         expected = 'lift_1'
@@ -19,6 +18,15 @@ class LiftTest(unittest.TestCase):
         actual = lift(3)
         self.assertEqual(actual, expected)
 
+    def test_input_4_should_return_lift_2(self):
+        expected = 'lift_2'
+        actual = lift(4)
+        self.assertEqual(actual, expected)
+
+    def test_input_5_should_return_lift_3(self):
+        expected = 'lift_3'
+        actual = lift(5)
+        self.assertEqual(actual, expected)
 
 
 lift_all = [
@@ -30,8 +38,11 @@ lift_all = [
 def lift(input):
     if input == 2:
         return lift_all[0].get('lift')
-    elif input == 3:
+    elif input == 3 or input == 4:
         return lift_all[1].get('lift')
+    elif input == 5:
+        return lift_all[2].get('lift')
     return lift_all[0].get('lift')
+
 
 unittest.main()
